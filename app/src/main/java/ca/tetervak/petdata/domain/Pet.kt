@@ -1,3 +1,8 @@
 package ca.tetervak.petdata.domain
 
-class Pet(val name: String, val animal: String, val gender: Gender)
+data class Pet(
+    val id: Int,
+    val name: String,
+    val animal: String,
+    val gender: Gender
+)

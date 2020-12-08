@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <import type="ca.tetervak.petdata.domain.Pet"/>
+        <variable name="pet" type="Pet" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/count"
+            tools:text="1)"
+            style="@style/outputCount" />
+
+        <TableLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:text="@string/name"
+                    style="@style/outputLabel" />
+
+                <TextView
+                    android:id="@+id/name"
+                    android:text="@{pet.name}"
+                    tools:text="Rodger"
+                    style="@style/outputValue" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/small_margin">
+
+                <TextView
+                    android:text="@string/animal"
+                    style="@style/outputLabel" />
+
+                <TextView
+                    android:id="@+id/animal"
+                    android:text="@{pet.animal}"
+                    tools:text="Rabbit"
+                    style="@style/outputValue" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/small_margin">
+
+                <TextView
+                    android:text="@string/gender"
+                    style="@style/outputLabel" />
+
+                <TextView
+                    android:id="@+id/gender"
+                    app:gender="@{pet.gender}"
+                    tools:text="Male"
+                    style="@style/outputValue" />
+            </TableRow>
+        </TableLayout>
+
+    </LinearLayout>
+</layout>
