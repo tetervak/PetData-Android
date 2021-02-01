@@ -4,10 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
-        <import type="ca.tetervak.petdata.ui.list.PetListViewModel"/>
-        <variable
-            name="viewModel"
-            type="PetListViewModel" />
+
     </data>
 
     <FrameLayout
@@ -21,7 +18,6 @@
             android:layout_height="match_parent"
             android:background="@android:color/white"
             app:layoutManager="LinearLayoutManager"
-            app:listData="@{viewModel.pets}"
             tools:listitem="@layout/pet_list_item" />
 
     </FrameLayout>

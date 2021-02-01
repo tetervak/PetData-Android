@@ -28,7 +28,10 @@ class PetListAdapter(
 
         fun bind(count: Int, pet: Pet) {
             binding.count.text = binding.root.context.getString(R.string.count, count)
-            binding.pet = pet
+            binding.name.text = pet.name
+            binding.animal.text = pet.animal
+            val genders = binding.root.resources.getStringArray(R.array.genders)
+            binding.gender.text = genders[pet.gender.ordinal]
             binding.executePendingBindings()
         }
     }

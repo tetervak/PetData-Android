@@ -4,8 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
-        <import type="ca.tetervak.petdata.domain.Pet"/>
-        <variable name="pet" type="Pet" />
+
     </data>
 
     <LinearLayout
@@ -33,7 +32,6 @@
 
                 <TextView
                     android:id="@+id/name"
-                    android:text="@{pet.name}"
                     tools:text="Rodger"
                     style="@style/outputValue" />
             </TableRow>
@@ -49,7 +47,6 @@
 
                 <TextView
                     android:id="@+id/animal"
-                    android:text="@{pet.animal}"
                     tools:text="Rabbit"
                     style="@style/outputValue" />
             </TableRow>
@@ -65,7 +62,6 @@
 
                 <TextView
                     android:id="@+id/gender"
-                    app:gender="@{pet.gender}"
                     tools:text="Male"
                     style="@style/outputValue" />
             </TableRow>
