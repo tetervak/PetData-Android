@@ -5,18 +5,14 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import ca.tetervak.petdata.domain.Gender
 import ca.tetervak.petdata.domain.Pet
+import ca.tetervak.petdata.repositories.PetRepository
+import dagger.hilt.android.lifecycle.HiltViewModel
+import javax.inject.Inject
 
-class PetListViewModel : ViewModel() {
+@HiltViewModel
+class PetListViewModel @Inject constructor(
+    petRepository: PetRepository
+) : ViewModel() {
 
-    private val _pets = MutableLiveData<List<Pet>>()
-    val pets: LiveData<List<Pet>> = _pets
-
-    init {
-        _pets.value = arrayListOf(
-            Pet(1, "Fluffy", "Cat", Gender.FEMALE, false),
-            Pet(2, "Sparky", "Dog", Gender.MALE, true),
-            Pet(3, "Rodger", "Rabbit", Gender.MALE),
-        )
-    }
-
+    val pets: LiveData<List<Pet>> = petRepository.getAllPets()
 }

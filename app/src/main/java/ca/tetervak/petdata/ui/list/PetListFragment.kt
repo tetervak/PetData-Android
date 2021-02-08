@@ -9,7 +9,9 @@ import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.DividerItemDecoration
 import ca.tetervak.petdata.R
 import ca.tetervak.petdata.databinding.PetListFragmentBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class PetListFragment : Fragment() {
 
     private val viewModel: PetListViewModel by viewModels()
