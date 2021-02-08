@@ -67,7 +67,7 @@
 
                 <TextView
                     android:id="@+id/gender"
-                    android:text="@{@stringArray/genders[pet.gender.ordinal]}"
+                    gender="@{pet.gender}"
                     tools:text="Male"
                     style="@style/outputValue" />
             </TableRow>
@@ -83,7 +83,7 @@
 
                 <TextView
                     android:id="@+id/isVaccinated"
-                    android:text="@{pet.vaccinated ? @string/yes : @string/no}"
+                    isVaccinated="@{pet.vaccinated}"
                     tools:text="No"
                     style="@style/outputValue" />
             </TableRow>

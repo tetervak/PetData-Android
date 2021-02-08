@@ -26,9 +26,8 @@ class PetListFragment : Fragment() {
         val adapter = PetListAdapter()
         binding.recyclerView.adapter = adapter
 
-        viewModel.pets.observe(viewLifecycleOwner) {
-            adapter.submitList(it)
-        }
+        binding.viewModel = viewModel
+        binding.lifecycleOwner = viewLifecycleOwner
 
         return binding.root
     }
