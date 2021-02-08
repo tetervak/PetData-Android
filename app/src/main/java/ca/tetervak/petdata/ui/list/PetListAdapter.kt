@@ -22,16 +22,13 @@ class PetListAdapter(
         holder.bind(position + 1, getItem(position))
     }
 
-    class ViewHolder constructor(
+    class ViewHolder(
         private val binding: PetListItemBinding
     ) : RecyclerView.ViewHolder(binding.root){
 
         fun bind(count: Int, pet: Pet) {
             binding.count.text = binding.root.context.getString(R.string.count, count)
-            binding.name.text = pet.name
-            binding.animal.text = pet.animal
-            val genders = binding.root.resources.getStringArray(R.array.genders)
-            binding.gender.text = genders[pet.gender.ordinal]
+            binding.pet = pet
             binding.executePendingBindings()
         }
     }

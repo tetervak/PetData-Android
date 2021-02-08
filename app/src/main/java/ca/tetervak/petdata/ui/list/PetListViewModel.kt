@@ -13,8 +13,8 @@ class PetListViewModel : ViewModel() {
 
     init {
         _pets.value = arrayListOf(
-            Pet(1, "Fluffy", "Cat", Gender.FEMALE),
-            Pet(2, "Sparky", "Dog", Gender.MALE),
+            Pet(1, "Fluffy", "Cat", Gender.FEMALE, false),
+            Pet(2, "Sparky", "Dog", Gender.MALE, true),
             Pet(3, "Rodger", "Rabbit", Gender.MALE),
         )
     }

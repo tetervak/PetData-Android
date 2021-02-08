@@ -9,6 +9,9 @@
     <string name="name">Name</string>
     <string name="animal">Animal</string>
     <string name="gender">Gender</string>
+    <string name="vaccinated">Vaccinated</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
 
     <!-- about dialog -->
     <string name="about">About</string>

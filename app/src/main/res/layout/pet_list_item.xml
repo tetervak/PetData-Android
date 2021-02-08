@@ -4,7 +4,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
-
+        <import type="ca.tetervak.petdata.domain.Pet"/>
+        <variable
+            name="pet"
+            type="Pet" />
     </data>
 
     <LinearLayout
@@ -32,6 +35,7 @@
 
                 <TextView
                     android:id="@+id/name"
+                    android:text="@{pet.name}"
                     tools:text="Rodger"
                     style="@style/outputValue" />
             </TableRow>
@@ -48,6 +52,7 @@
                 <TextView
                     android:id="@+id/animal"
                     tools:text="Rabbit"
+                    android:text="@{pet.animal}"
                     style="@style/outputValue" />
             </TableRow>
 
@@ -62,9 +67,27 @@
 
                 <TextView
                     android:id="@+id/gender"
+                    android:text="@{@stringArray/genders[pet.gender.ordinal]}"
                     tools:text="Male"
                     style="@style/outputValue" />
             </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/small_margin">
+
+                <TextView
+                    android:text="@string/vaccinated"
+                    style="@style/outputLabel" />
+
+                <TextView
+                    android:id="@+id/isVaccinated"
+                    android:text="@{pet.vaccinated ? @string/yes : @string/no}"
+                    tools:text="No"
+                    style="@style/outputValue" />
+            </TableRow>
+
         </TableLayout>
 
     </LinearLayout>
