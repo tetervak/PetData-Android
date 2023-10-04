@@ -20,6 +20,7 @@ import androidx.compose.ui.text.intl.Locale
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import ca.tetervak.petdata.R
+import ca.tetervak.petdata.data.remote.imageFolder
 import ca.tetervak.petdata.domain.Pet
 import coil.compose.AsyncImage
 
@@ -54,7 +55,7 @@ fun PetListItem(pet: Pet) {
             modifier = Modifier.padding(16.dp)
         ){
             AsyncImage(
-                model = "file:///android_asset/images/${pet.image}",
+                model = imageFolder + pet.image,
                 contentDescription = "${pet.petKind} ${pet.name}"
             )
             Column(

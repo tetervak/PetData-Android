@@ -1,3 +1,4 @@
+import org.jetbrains.kotlin.kapt3.base.Kapt.kapt
 
 plugins {
     id("com.android.application")
@@ -71,6 +72,9 @@ dependencies {
     // needed for the dependency injection
     implementation("com.google.dagger:hilt-android:2.44.2")
     kapt("com.google.dagger:hilt-android-compiler:2.44.2")
+
+    // need to receive remote data
+    implementation("com.squareup.retrofit2:converter-moshi:2.9.0")
 
     // display images from web or assets
     implementation("io.coil-kt:coil-compose:2.4.0")

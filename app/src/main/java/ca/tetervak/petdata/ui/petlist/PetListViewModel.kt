@@ -31,7 +31,7 @@ class PetListViewModel @Inject constructor(
         try {
             val pets = repository.getAllPets()
             _uiState.value = PetListUiState.Loaded(pets)
-        } catch (e: IOException) {
+        } catch (e: Exception) {
             _uiState.value = PetListUiState.Error
             e.printStackTrace()
         }

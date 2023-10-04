@@ -11,6 +11,6 @@ import dagger.hilt.components.SingletonComponent
 abstract class RepositoryModule {
 
     @Binds
-    abstract fun petDataRepository(repository: FakePetDataRepository): PetDataRepository
+    abstract fun petDataRepository(repository: PetDataRepositoryImpl): PetDataRepository
 
 }
