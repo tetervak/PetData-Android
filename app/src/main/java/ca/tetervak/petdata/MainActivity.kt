@@ -9,9 +9,7 @@ import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
 import ca.tetervak.petdata.ui.AppScreen
 import ca.tetervak.petdata.ui.theme.AppTheme
-import dagger.hilt.android.AndroidEntryPoint
 
-@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

@@ -36,10 +36,6 @@ fun PetListScreen(
                 petList = uiState.pets,
                 modifier = modifier.padding(innerPadding)
             )
-            is PetListUiState.Loading -> LoadingBody()
-            is PetListUiState.Error -> ErrorBody(
-                onRetry = viewModel::reloadPetList
-            )
         }
     }
 }

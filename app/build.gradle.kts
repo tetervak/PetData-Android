@@ -2,10 +2,6 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
-
-    // needed for the dependency injection
-    kotlin("kapt")
-    id("com.google.dagger.hilt.android")
 }
 
 android {
@@ -68,10 +64,6 @@ dependencies {
     // needed for viewModel() function
     implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.6.2")
 
-    // needed for the dependency injection
-    implementation("com.google.dagger:hilt-android:2.44.2")
-    kapt("com.google.dagger:hilt-android-compiler:2.44.2")
-
     // display images from web or assets
     implementation("io.coil-kt:coil-compose:2.4.0")
 
@@ -82,9 +74,4 @@ dependencies {
     androidTestImplementation("androidx.compose.ui:ui-test-junit4")
     debugImplementation("androidx.compose.ui:ui-tooling")
     debugImplementation("androidx.compose.ui:ui-test-manifest")
-}
-
-// Allow references to generated code
-kapt {
-    correctErrorTypes = true
 }
