@@ -1,5 +1,6 @@
 package ca.tetervak.petdata.ui.petlist
 
+import android.util.Log
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.State
 import androidx.compose.runtime.mutableStateOf
@@ -30,6 +31,7 @@ class PetListViewModel @Inject constructor(
         delay(2000)
         try {
             val pets = repository.getAllPets()
+            Log.d(TAG, "Loaded ${pets.size} pets.")
             _uiState.value = PetListUiState.Loaded(pets)
         } catch (e: Exception) {
             _uiState.value = PetListUiState.Error
@@ -42,5 +44,8 @@ class PetListViewModel @Inject constructor(
         loadPetList()
     }
 
+    companion object{
+        const val TAG = "PetListViewModel"
+    }
 }
 
