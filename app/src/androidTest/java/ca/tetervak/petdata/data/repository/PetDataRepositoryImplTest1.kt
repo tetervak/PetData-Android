@@ -14,6 +14,7 @@ import org.junit.runner.RunWith
 @RunWith(AndroidJUnit4::class)
 class PetDataRepositoryImplTest1 {
 
+    // It is not a unit test because it connects to the outside server
     @Test
     fun getAllPets() {
         val retrofit = RetrofitModule.retrofit()
