@@ -70,8 +70,6 @@ dependencies {
 
     // needed for the dependency injection
     implementation("com.google.dagger:hilt-android:2.48.1")
-    testImplementation("junit:junit:4.12")
-    testImplementation("junit:junit:4.12")
     kapt("com.google.dagger:hilt-android-compiler:2.48.1")
 
     // need to receive remote data
