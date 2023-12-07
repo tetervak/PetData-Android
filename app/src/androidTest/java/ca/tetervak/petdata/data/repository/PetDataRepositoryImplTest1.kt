@@ -3,7 +3,6 @@ package ca.tetervak.petdata.data.repository
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import ca.tetervak.petdata.data.remote.RetrofitModule
 import kotlinx.coroutines.test.runTest
-import org.junit.After
 import org.junit.Assert.*
 import org.junit.Before
 
