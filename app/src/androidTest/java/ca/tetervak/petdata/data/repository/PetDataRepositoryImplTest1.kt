@@ -27,6 +27,7 @@ class PetDataRepositoryImplTest1 {
         runTest {
             val pets = repository.getAllPets()
             println(pets)
+            assertEquals(7, pets.size)
         }
     }
 }
