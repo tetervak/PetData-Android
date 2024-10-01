@@ -9,13 +9,14 @@ import androidx.compose.runtime.State
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.input.nestedscroll.nestedScroll
 import androidx.compose.ui.res.stringResource
+import androidx.lifecycle.viewmodel.compose.viewModel
 import ca.tetervak.petdata.R
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun PetListScreen(
-    viewModel: PetListViewModel,
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+    viewModel: PetListViewModel = viewModel()
 ){
     val state: State<PetListUiState> = viewModel.uiState
     val uiState: PetListUiState = state.value
