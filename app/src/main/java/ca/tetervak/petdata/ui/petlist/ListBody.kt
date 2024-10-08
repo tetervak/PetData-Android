@@ -26,7 +26,8 @@ import coil.compose.AsyncImage
 @Composable
 fun ListBody(
     petList: List<Pet>,
-    modifier: Modifier
+    modifier: Modifier,
+    onItemClick: (Int) -> Unit
 ) {
     LazyColumn(
         contentPadding = PaddingValues(
@@ -34,15 +35,16 @@ fun ListBody(
         ), modifier = modifier
     ) {
         items(petList) { pet ->
-            PetListItem(pet)
+            PetListItem(pet, { onItemClick(pet.id) })
         }
     }
 
 }
 
 @Composable
-fun PetListItem(pet: Pet) {
+fun PetListItem(pet: Pet, onClick: () -> Unit) {
     Card(
+        onClick = onClick,
         elevation = CardDefaults.cardElevation(defaultElevation = 4.dp),
         modifier = Modifier
             .padding(8.dp)

@@ -1,5 +1,6 @@
 package ca.tetervak.petdata.ui.petlist
 
+import android.util.Log
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.State
 import androidx.compose.runtime.mutableStateOf
@@ -22,6 +23,7 @@ class PetListViewModel @Inject constructor(
     val uiState: State<PetListUiState> = _uiState
 
     init {
+        Log.d("PetListViewModel", "PetListViewModel created")
         loadPetList()
     }
 
@@ -40,6 +42,11 @@ class PetListViewModel @Inject constructor(
     fun reloadPetList() {
         _uiState.value = PetListUiState.Loading
         loadPetList()
+    }
+
+    override fun onCleared() {
+        super.onCleared()
+        Log.d("PetListViewModel", "PetListViewModel destroyed")
     }
 
 }

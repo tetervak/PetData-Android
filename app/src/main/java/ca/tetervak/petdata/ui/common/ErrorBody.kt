@@ -1,4 +1,4 @@
-package ca.tetervak.petdata.ui.petlist
+package ca.tetervak.petdata.ui.common
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
