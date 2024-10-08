@@ -12,4 +12,9 @@ class FakePetDataRepository @Inject constructor(): PetDataRepository {
         withContext(Dispatchers.IO){
             fakePetList
         }
+
+    override suspend fun getPetById(id: Int): Pet? =
+        withContext(Dispatchers.IO){
+            fakePetList.find { it.id == id }
+        }
 }
