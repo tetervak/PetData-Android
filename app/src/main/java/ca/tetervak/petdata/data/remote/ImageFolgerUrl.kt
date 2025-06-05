@@ -1,3 +1,4 @@
 package ca.tetervak.petdata.data.remote
 
-val imageFolder: String = "http://10.0.2.2:8080/images/pets/"
+const val imageFolder: String =
+    "https://tetervak.dev.fast.sheridanc.on.ca/mobile-app-data/pet-data/images/pets/"

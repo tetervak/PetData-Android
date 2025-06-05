@@ -14,7 +14,7 @@ class PetDataRepositoryImpl @Inject constructor(
     override suspend fun getAllPets(): List<Pet> =
         withContext(Dispatchers.IO){
         val remoteData:RemoteData = petDataApi.getRemoteData()
-        remoteData._embedded.pets.map { it.toPet() }
+        remoteData.pets.map { it.toPet() }
     }
 }
 

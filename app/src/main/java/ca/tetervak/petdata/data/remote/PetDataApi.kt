@@ -4,6 +4,6 @@ import retrofit2.http.GET
 
 interface PetDataApi {
 
-    @GET("pets")
+    @GET("pets.json")
     suspend fun getRemoteData(): RemoteData
 }

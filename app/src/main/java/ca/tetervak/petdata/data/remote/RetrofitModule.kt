@@ -13,7 +13,8 @@ import javax.inject.Singleton
 @InstallIn(SingletonComponent::class)
 object RetrofitModule {
 
-    private const val baseUrl = "http://10.0.2.2:8080/api/"
+    private const val baseUrl =
+        "https://tetervak.dev.fast.sheridanc.on.ca/mobile-app-data/pet-data/data/"
 
     @Provides
     @Singleton
